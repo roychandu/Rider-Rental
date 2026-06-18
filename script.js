@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "919090900650";
+const WHATSAPP_NUMBER = "918869846824";
 const STORAGE_KEY = "rider-rental-cart";
 
 const bikes = [
@@ -474,12 +474,39 @@ function setMinimumDate() {
 }
 
 function clearInvalidFields() {
-  bookingForm?.querySelectorAll(".is-invalid").forEach((field) => field.classList.remove("is-invalid"));
+  bookingForm?.querySelectorAll(".is-invalid").forEach((field) => {
+    field.classList.remove("is-invalid");
+    const errorSpan = document.getElementById(`error-${field.id}`);
+    if (errorSpan) errorSpan.textContent = "";
+  });
 }
 
-function markInvalid(field) {
-  field?.classList.add("is-invalid");
-  field?.focus();
+function setFieldError(fieldId, message) {
+  const field = document.getElementById(fieldId);
+  const errorSpan = document.getElementById(`error-${fieldId}`);
+  if (field) field.classList.toggle("is-invalid", !!message);
+  if (errorSpan) errorSpan.textContent = message || "";
+}
+
+function validateField(field) {
+  if (!field) return true;
+  const name = field.name;
+  const value = field.value.trim();
+  let error = "";
+
+  if (field.hasAttribute("required") && !value) {
+    error = "This field is required.";
+  } else if (name === "phone") {
+    const digits = value.replace(/\D/g, "");
+    if (digits.length !== 10) {
+      error = "Please enter a valid 10-digit mobile number.";
+    }
+  } else if (name === "name" && value.length < 2) {
+    error = "Please enter your full name.";
+  }
+
+  setFieldError(field.id, error);
+  return !error;
 }
 
 function buildWhatsappMessage(formData) {
@@ -516,14 +543,16 @@ function submitBooking(event) {
   event.preventDefault();
   if (!bookingForm) return;
 
-  clearInvalidFields();
+  const inputs = Array.from(bookingForm.querySelectorAll("input[required], select[required]"));
+  let isFormValid = true;
+  let firstInvalid = null;
 
-  const formData = new FormData(bookingForm);
-  const name = String(formData.get("name") || "").trim();
-  const phone = String(formData.get("phone") || "").replace(/\D/g, "");
-  const pickupDate = String(formData.get("pickupDate") || "").trim();
-  const pickupTime = String(formData.get("pickupTime") || "").trim();
-  const returnTime = String(formData.get("returnTime") || "").trim();
+  for (const input of inputs) {
+    if (!validateField(input)) {
+      isFormValid = false;
+      if (!firstInvalid) firstInvalid = input;
+    }
+  }
 
   if (!cartCount()) {
     setStatus("Please add at least one ride before sending the booking.", "error");
@@ -531,40 +560,22 @@ function submitBooking(event) {
     return;
   }
 
-  if (!name) {
-    setStatus("Please enter your name.", "error");
-    markInvalid(document.querySelector("#customer-name"));
+  if (!isFormValid) {
+    setStatus("Please fix the errors in the form.", "error");
+    firstInvalid?.focus();
     return;
   }
 
-  if (phone.length < 7) {
-    setStatus("Please enter a valid mobile number.", "error");
-    markInvalid(document.querySelector("#customer-phone"));
-    return;
-  }
-
-  if (!pickupDate) {
-    setStatus("Please choose a pickup date.", "error");
-    markInvalid(document.querySelector("#pickup-date"));
-    return;
-  }
-
-  if (!pickupTime) {
-    setStatus("Please choose a pickup time.", "error");
-    markInvalid(document.querySelector("#pickup-time"));
-    return;
-  }
-
-  if (!returnTime) {
-    setStatus("Please choose a give-back time.", "error");
-    markInvalid(document.querySelector("#return-time"));
-    return;
-  }
-
-  const message = buildWhatsappMessage(formData);
+  const message = buildWhatsappMessage(new FormData(bookingForm));
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-  setStatus("Opening WhatsApp with your booking request.", "success");
   window.open(url, "_blank", "noopener");
+
+  // Reset form, cart, and duration after sending
+  bookingForm.reset();
+  setMinimumDate();
+  clearCart();
+  setDurationDays(1);
+  setStatus("Booking sent! Your cart and form have been cleared.", "success");
 }
 
 let revealObserver;
@@ -725,6 +736,19 @@ clearCartButton?.addEventListener("click", clearCart);
 durationInput?.addEventListener("input", renderCart);
 durationInput?.addEventListener("change", () => setDurationDays(getDuration()));
 bookingForm?.addEventListener("click", handleDurationClick);
+
+// Field-wise validation listeners
+bookingForm?.querySelectorAll("input, select, textarea").forEach((input) => {
+  if (input.name === "phone") {
+    input.addEventListener("input", (e) => {
+      e.target.value = e.target.value.replace(/\D/g, "").slice(0, 10);
+      validateField(input);
+    });
+  } else {
+    input.addEventListener("input", () => validateField(input));
+  }
+  input.addEventListener("blur", () => validateField(input));
+});
 
 bookingForm?.addEventListener("submit", submitBooking);
 
