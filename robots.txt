@@ -1,0 +1,12 @@
+# Rider Rental — robots.txt
+# https://rider-rental.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rider-rental.vercel.app/sitemap.xml
+
+# Block raw asset directories from being indexed individually
+Disallow: /assets/bikes/
+Disallow: /assets/places/
