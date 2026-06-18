@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description"
+    content="Rider Rental is a Haridwar bike and scooty rental website with live booking cart, route planning, daily prices, and WhatsApp booking.">
+  <title>Rider Rental | Bike & Scooty Booking in Haridwar</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css?v=7">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" data-header>
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Rider Rental home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/logo.png" width="879" height="1024" alt="">
+        </span>
+        <span>
+          <strong>Rider Rental</strong>
+          <small>Haridwar Bike Hire</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+
+      <div class="nav-links" data-nav-links>
+        <a href="#bikes">Bikes</a>
+        <a href="#booking">Booking</a>
+        <a href="#routes">Routes</a>
+        <a href="#reviews">Reviews</a>
+        <a class="nav-call" href="tel:+919090900650">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6.6 10.8a15.7 15.7 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.6 21.4 2.6 13.4 2.6 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 4 .1.4 0 .9-.3 1.2l-2.2 2.2Z">
+            </path>
+          </svg>
+          Call
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero-image hero-image-primary" src="assets/places/hero-haridwar-rishikesh.jpg" width="1672"
+        height="941" alt="" fetchpriority="high">
+      <img class="hero-image hero-image-secondary" src="assets/places/rishikesh-lakshman-jhula.jpg" width="4608"
+        height="2592" alt="">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">24 hour bike, scooty and Royal Enfield rentals</p>
+          <h1 id="hero-title"><span>Rider</span><span>Rental</span></h1>
+          <p class="hero-lede">
+            Build your ride cart, choose pickup details, and send one clean WhatsApp booking
+            request for Haridwar, Rishikesh, Mussoorie, Char Dham routes and nearby trips.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#bikes">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+              Pick bikes
+            </a>
+            <button class="button button-secondary" type="button" data-open-cart>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 6h15l-2 8H8L6 3H3"></path>
+                <path d="M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+              </svg>
+              Booking cart
+            </button>
+          </div>
+        </div>
+
+        <div class="ride-visual reveal" data-tilt aria-hidden="true">
+          <div class="instants-stack" id="instants-stack">
+            <!-- Card 0: Hunter 350 -->
+            <div class="instant-card" data-bike-id="hunter" style="--card-index: 0;">
+              <div class="card-header">
+                <div class="card-avatar-wrapper">
+                  <img src="assets/logo.png" class="card-avatar" alt="">
+                </div>
+                <div class="card-user-info">
+                  <span class="card-username">rider_rental <span class="card-verify-badge"></span></span>
+                  <span class="card-location">Haridwar, Uttarakhand</span>
+                </div>
+                <svg class="card-dots" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+              </div>
+              <div class="card-image-wrapper">
+                <img class="card-image" src="assets/bikes/hunter-350-red.jpg" alt="Royal Enfield Hunter 350">
+                <span class="card-price-badge">₹1,500/day</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-actions">
+                  <button class="card-action-btn like-btn" type="button" aria-label="Like">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </button>
+                  <button class="card-action-btn comment-btn" type="button" aria-label="Comment">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                  </button>
+                  <button class="card-action-btn share-btn" type="button" aria-label="Share">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-caption">
+                  <strong>Royal Enfield Hunter 350</strong> Premium comfort for longer self-ride plans.
+                </div>
+                <div class="card-meta">View all 18 comments • Just now</div>
+              </div>
+            </div>
+
+            <!-- Card 1: Hero Xpulse 200 -->
+            <div class="instant-card" data-bike-id="xpulse" style="--card-index: 1;">
+              <div class="card-header">
+                <div class="card-avatar-wrapper">
+                  <img src="assets/logo.png" class="card-avatar" alt="">
+                </div>
+                <div class="card-user-info">
+                  <span class="card-username">rider_rental <span class="card-verify-badge"></span></span>
+                  <span class="card-location">Mussoorie routes</span>
+                </div>
+                <svg class="card-dots" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+              </div>
+              <div class="card-image-wrapper">
+                <img class="card-image" src="assets/bikes/classic-bullet.jpg" alt="Hero Xpulse 200">
+                <span class="card-price-badge">₹1,199/day</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-actions">
+                  <button class="card-action-btn like-btn" type="button" aria-label="Like">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </button>
+                  <button class="card-action-btn comment-btn" type="button" aria-label="Comment">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                  </button>
+                  <button class="card-action-btn share-btn" type="button" aria-label="Share">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-caption">
+                  <strong>Hero Xpulse 200</strong> Adventure stance, perfect for rougher mountain routes.
+                </div>
+                <div class="card-meta">View all 12 comments • 1 hour ago</div>
+              </div>
+            </div>
+
+            <!-- Card 2: TVS Ntorq Blue -->
+            <div class="instant-card" data-bike-id="ntorq" style="--card-index: 2;">
+              <div class="card-header">
+                <div class="card-avatar-wrapper">
+                  <img src="assets/logo.png" class="card-avatar" alt="">
+                </div>
+                <div class="card-user-info">
+                  <span class="card-username">rider_rental <span class="card-verify-badge"></span></span>
+                  <span class="card-location">Rishikesh café runs</span>
+                </div>
+                <svg class="card-dots" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+              </div>
+              <div class="card-image-wrapper">
+                <img class="card-image" src="assets/bikes/tvs-ntorq-blue.jpg" alt="TVS Ntorq Blue">
+                <span class="card-price-badge">₹700/day</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-actions">
+                  <button class="card-action-btn like-btn" type="button" aria-label="Like">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </button>
+                  <button class="card-action-btn comment-btn" type="button" aria-label="Comment">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                  </button>
+                  <button class="card-action-btn share-btn" type="button" aria-label="Share">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-caption">
+                  <strong>TVS Ntorq Blue</strong> Sporty, helmet-ready, and great for quick local touring.
+                </div>
+                <div class="card-meta">View all 8 comments • 2 hours ago</div>
+              </div>
+            </div>
+
+            <!-- Card 3: Honda Activa Grey -->
+            <div class="instant-card" data-bike-id="activa" style="--card-index: 3;">
+              <div class="card-header">
+                <div class="card-avatar-wrapper">
+                  <img src="assets/logo.png" class="card-avatar" alt="">
+                </div>
+                <div class="card-user-info">
+                  <span class="card-username">rider_rental <span class="card-verify-badge"></span></span>
+                  <span class="card-location">Haridwar local ghats</span>
+                </div>
+                <svg class="card-dots" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+              </div>
+              <div class="card-image-wrapper">
+                <img class="card-image" src="assets/bikes/street-bike.jpg" alt="Honda Activa Grey">
+                <span class="card-price-badge">₹600/day</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-actions">
+                  <button class="card-action-btn like-btn" type="button" aria-label="Like">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </button>
+                  <button class="card-action-btn comment-btn" type="button" aria-label="Comment">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                  </button>
+                  <button class="card-action-btn share-btn" type="button" aria-label="Share">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-caption">
+                  <strong>Honda Activa Grey</strong> Easy city friendly ride, perfect for short ghat pickups.
+                </div>
+                <div class="card-meta">View all 25 comments • 4 hours ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Rental highlights">
+      <div>
+        <strong>₹600+</strong>
+        <span>Daily starting price</span>
+      </div>
+      <div>
+        <strong>8 rides</strong>
+        <span>Scooty, bike and premium options</span>
+      </div>
+      <div>
+        <strong>WhatsApp</strong>
+        <span>Booking details sent in one message</span>
+      </div>
+      <div>
+        <strong>Haridwar</strong>
+        <span>Pickup for Uttarakhand routes</span>
+      </div>
+    </section>
+
+    <section class="section bikes-section" id="bikes" aria-labelledby="bikes-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">Bike menu</p>
+            <h2 id="bikes-title">Add rides to your booking cart.</h2>
+          </div>
+          <p>
+            Prices are starting day rates from the provided rental examples. Final availability,
+            documents, fuel rules and security deposit are confirmed on WhatsApp.
+          </p>
+        </div>
+
+        <div class="bikes-toolbar" aria-label="Bike filters">
+          <button class="filter-chip is-active" type="button" data-filter="all">All rides</button>
+          <button class="filter-chip" type="button" data-filter="scooter">Scooters</button>
+          <button class="filter-chip" type="button" data-filter="bike">Bikes</button>
+          <button class="filter-chip" type="button" data-filter="premium">Premium</button>
+        </div>
+
+        <div class="bikes-grid" id="bikes-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="booking" aria-labelledby="booking-title">
+      <div class="shell booking-layout">
+        <div class="booking-copy">
+          <p class="eyebrow dark">Booking system</p>
+          <h2 id="booking-title">Review price, pickup and route before WhatsApp.</h2>
+          <p>
+            The booking cart calculates an estimated total using selected vehicles, quantity
+            pickup time, give-back time and duration. The final request opens in WhatsApp with all details included.
+          </p>
+          <div class="document-list">
+            <div>
+              <strong>Documents</strong>
+              <span>Driving license, Aadhaar or ID, and security deposit if required.</span>
+            </div>
+            <div>
+              <strong>Pickup</strong>
+              <span>Haridwar Railway Station, rental office, or custom pickup note.</span>
+            </div>
+            <div>
+              <strong>Included in request</strong>
+              <span>Vehicle list, pickup date, pickup time, give-back time, route, mobile number and total
+                estimate.</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="booking-form" id="booking-form" novalidate>
+          <div class="form-grid">
+            <label>
+              <span>Your name</span>
+              <input id="customer-name" name="name" type="text" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Mobile number</span>
+              <input id="customer-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+            </label>
+            <label>
+              <span>Pickup date</span>
+              <input id="pickup-date" name="pickupDate" type="date" required>
+            </label>
+            <div class="form-field">
+              <span class="field-label" id="duration-label">Duration in days</span>
+              <span class="duration-control" role="group" aria-labelledby="duration-label">
+                <button class="stepper-button" type="button" data-days-decrease
+                  aria-label="Decrease rental days">-</button>
+                <input id="duration-days" name="duration" type="number" min="1" max="30" inputmode="numeric" value="1"
+                  aria-labelledby="duration-label" required>
+                <button class="stepper-button" type="button" data-days-increase
+                  aria-label="Increase rental days">+</button>
+              </span>
+            </div>
+            <label>
+              <span>Pickup time</span>
+              <select id="pickup-time" name="pickupTime" required>
+                <option value="">Select pickup time</option>
+                <option>06:00 AM</option>
+                <option>07:00 AM</option>
+                <option>08:00 AM</option>
+                <option>09:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>01:00 PM</option>
+                <option>02:00 PM</option>
+                <option>03:00 PM</option>
+                <option>04:00 PM</option>
+                <option>05:00 PM</option>
+                <option>06:00 PM</option>
+                <option>07:00 PM</option>
+                <option>08:00 PM</option>
+              </select>
+            </label>
+            <label>
+              <span>Give-back time</span>
+              <select id="return-time" name="returnTime" required>
+                <option value="">Select give-back time</option>
+                <option>06:00 AM</option>
+                <option>07:00 AM</option>
+                <option>08:00 AM</option>
+                <option>09:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>01:00 PM</option>
+                <option>02:00 PM</option>
+                <option>03:00 PM</option>
+                <option>04:00 PM</option>
+                <option>05:00 PM</option>
+                <option>06:00 PM</option>
+                <option>07:00 PM</option>
+                <option>08:00 PM</option>
+                <option>09:00 PM</option>
+              </select>
+            </label>
+            <label class="full">
+              <span>Pickup point</span>
+              <select id="pickup-point" name="pickup">
+                <option>Haridwar Railway Station</option>
+                <option>Rental office, Haridwar</option>
+                <option>Rishikesh pickup request</option>
+                <option>Custom pickup in route note</option>
+              </select>
+            </label>
+            <label class="full">
+              <span>Route or special request</span>
+              <textarea id="route-note" name="route" rows="4"
+                placeholder="Example: Haridwar to Rishikesh for 2 people, need helmets and luggage support…"></textarea>
+            </label>
+          </div>
+
+          <div class="booking-summary" aria-label="Booking total">
+            <div>
+              <span>Selected rides</span>
+              <strong class="number" data-cart-count>0</strong>
+            </div>
+            <div>
+              <span>Estimated total</span>
+              <strong class="number" data-cart-total>₹0</strong>
+            </div>
+          </div>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite">
+            Add at least one ride to the booking cart.
+          </p>
+
+          <div class="form-actions">
+            <button class="button button-primary" type="submit">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m22 2-7 20-4-9-9-4 20-7Z"></path>
+                <path d="M22 2 11 13"></path>
+              </svg>
+              Send WhatsApp booking
+            </button>
+            <button class="button button-ghost" type="button" data-open-cart>Open cart</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section routes-section" id="routes" aria-labelledby="routes-title">
+      <div class="shell routes-grid">
+        <div class="route-card reveal">
+          <img src="assets/places/rishikesh-lakshman-jhula.jpg" width="4608" height="2592" loading="lazy"
+            alt="Lakshman Jhula route near Rishikesh">
+          <div>
+            <p class="eyebrow dark">Popular route</p>
+            <h2 id="routes-title">Haridwar to Rishikesh</h2>
+            <p>Choose scooters for local ghats and cafe runs, or a bike when the route extends toward Neelkanth, Tehri
+              or hill roads.</p>
+          </div>
+        </div>
+        <div class="route-stack">
+          <article class="mini-route reveal">
+            <strong>Char Dham prep</strong>
+            <span>Ask for luggage, helmets and premium touring availability.</span>
+          </article>
+          <article class="mini-route reveal">
+            <strong>Mussoorie day plan</strong>
+            <span>Book higher-cc bikes for longer climbs and return timing.</span>
+          </article>
+          <article class="mini-route reveal">
+            <strong>Local Haridwar</strong>
+            <span>Activa and Burgman options keep short rides simple.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews-section" id="reviews" aria-labelledby="reviews-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow dark">Rental proof</p>
+            <h2 id="reviews-title">Built from the supplied rental examples.</h2>
+          </div>
+          <p>Source folders include real-looking listing photos, daily price examples, location signals and review
+            patterns. This new site keeps those trust cues focused around booking.</p>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <span class="rating">4.9 Google style rating</span>
+            <p>Clean vehicles, route guidance and fast handover are highlighted throughout the provided examples.</p>
+          </article>
+          <article class="review-card reveal">
+            <span class="rating">Open all day</span>
+            <p>Haridwar station pickup and early departures are emphasized for travel-heavy customers.</p>
+          </article>
+          <article class="review-card reveal">
+            <span class="rating">Direct WhatsApp</span>
+            <p>The booking flow avoids long checkout screens and sends a readable message to the rental team.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="cart-fab" type="button" data-open-cart aria-label="Open booking cart">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 6h15l-2 8H8L6 3H3"></path>
+      <path d="M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+    </svg>
+    <span class="cart-fab-count number" data-cart-count>0</span>
+  </button>
+
+  <aside class="cart-drawer" data-cart-drawer aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-panel">
+      <div class="cart-head">
+        <div>
+          <p class="eyebrow dark">Booking cart</p>
+          <h2 id="cart-title">Your ride selection</h2>
+        </div>
+        <button class="icon-button" type="button" data-close-cart aria-label="Close booking cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-items" data-cart-items></div>
+      <div class="cart-empty" data-cart-empty>
+        <strong>No rides selected</strong>
+        <span>Choose from the bike menu and they will appear here.</span>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total-line">
+          <span>Total estimate</span>
+          <strong class="number" data-cart-total>₹0</strong>
+        </div>
+        <div class="cart-footer-actions">
+          <button class="button button-ghost" type="button" data-clear-cart>Clear</button>
+          <a class="button button-primary" href="#booking" data-close-cart-link>Continue booking</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <strong>Rider Rental</strong>
+        <span>Bike and scooty bookings for Haridwar routes.</span>
+      </div>
+      <div>
+        <a href="tel:+919090900650">+91 90909 00650</a>
+        <a href="https://wa.me/919090900650" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=7" defer></script>
+</body>
+
+</html>
