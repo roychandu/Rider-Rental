@@ -17,7 +17,7 @@ const bikes = [
     id: "ntorq",
     name: "TVS Ntorq Blue",
     category: "scooter",
-    price: 700,
+    price: 850,
     image: "assets/bikes/tvs-ntorq-blue.jpg",
     alt: "Blue TVS Ntorq scooter available for rent",
     tag: "Sport scooter",
