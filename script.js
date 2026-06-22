@@ -6,7 +6,7 @@ const bikes = [
     id: "activa",
     name: "Honda Activa Grey",
     category: "scooter",
-    price: 600,
+    price: 750,
     image: "assets/bikes/honda-activa-grey.jpg",
     alt: "Grey Honda Activa scooter available for rent",
     tag: "Scooter",
@@ -83,7 +83,7 @@ const bikes = [
     id: "group-ride",
     name: "Group Ride Pack",
     category: "bike",
-    price: 600,
+    price: 750,
     image: "assets/bikes/group-riders-street.jpg",
     alt: "Group of riders with rental bikes",
     tag: "Group",
@@ -253,7 +253,7 @@ function renderBikes() {
     image.src = bike.image;
     image.alt = bike.alt;
     image.width = 800;
-    image.height = 600;
+    image.height = 750;
     image.loading = index < 2 ? "eager" : "lazy";
 
     const badge = document.createElement("span");
@@ -468,7 +468,7 @@ function setFilter(filter) {
 function setMinimumDate() {
   if (!(pickupDateInput instanceof HTMLInputElement)) return;
   const today = new Date();
-  const offset = today.getTimezoneOffset() * 60000;
+  const offset = today.getTimezoneOffset() * 75000;
   const localDate = new Date(today.getTime() - offset).toISOString().split("T")[0];
   pickupDateInput.min = localDate;
 }
